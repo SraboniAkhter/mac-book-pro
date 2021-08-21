@@ -61,6 +61,9 @@ document.getElementById('apply-button').addEventListener("click", function() {
         let discount = ( subTotalPrice/100)*20;
         let totalDiscount = subTotalPrice - discount;
         discountPrice.innerText = totalDiscount;
+        const disableButton = document.getElementById('discountPrice');
+        disableButton.disabled = true;
+        promoCodeInput.value = '';
     }
     
 });
